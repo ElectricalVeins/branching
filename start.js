@@ -1,8 +1,12 @@
 const totalUsers = 10;
 const greetings = 'hello';
+const farewell = 'goodbye';
 
-const welcomeMessage = greetings + ', ' +  totalUsers + ' ' + 'online';
+const welcomeMsg = getAlertString(greetings);
+const goodbyeMsg = getAlertString(farewell);
 
-const templateString = `${greetings}, ${totalUsers} online`;
+function getAlertString(aloha) {
+  return `${aloha}, ${totalUsers} online`;
+}
 
-alert(templateString);
+alert(getAlertString);
