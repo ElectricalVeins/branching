@@ -1,3 +1,8 @@
-// require server.js
+const totalUsers = 10;
+const greetings = 'hello';
 
-// server.start()
+const welcomeMessage = greetings + ', ' +  totalUsers + ' ' + 'online';
+
+const templateString = `${greetings}, ${totalUsers} online`;
+
+alert(templateString);
