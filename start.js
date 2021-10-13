@@ -1,18 +1,22 @@
-const totalUsers = 10;
-const greetings = 'hello';
-const farewell = 'goodbye';
+const chair = 'chair';
+let chairLegs = 4;
 
-const welcomeMsg = getAlertString(greetings);
-const goodbyeMsg = getAlertString(farewell);
+function checkChair(chair, chairLegs) {
+  if (!chair) {
+    return 'Chair is absent';
+  }
 
-// FD declaration
-function getAlertString(aloha) {
-  return `${aloha}, ${totalUsers} online`;
+  if (chairLegs === 4 || chairLegs === 3) {
+    return 'Chair is working';
+  }
+
+  if (chairLegs < 3) {
+    return 'Chair is broken';
+  }
+
+  if (chairLegs > 4) {
+    return '??? WTF ???';
+  }
 }
 
-// FE expression
-const func = function () {
-  return 1;
-}
-
-alert(getAlertString);
+console.log(`YOUR CHAIR IS IN CONDITION: ${checkChair(chair, chairLegs)}`);
